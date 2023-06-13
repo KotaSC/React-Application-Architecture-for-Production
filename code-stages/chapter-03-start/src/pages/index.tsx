@@ -10,7 +10,7 @@ const LandingPage = () => {
         Click me
       </Button>
       <br />
-      <InputField />
+      <InputField label="Name" />
       <br />
       <Link />
     </>
