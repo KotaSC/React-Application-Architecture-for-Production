@@ -12,7 +12,7 @@ const LandingPage = () => {
       <br />
       <InputField label="Name" />
       <br />
-      <Link />
+      <Link href="/">Home</Link>
     </>
   );
 };
