@@ -25,7 +25,7 @@ export const useCreateJob = ({
   const { mutate: submit, isLoading } = useMutation({
     mutationFn: createJob,
     onSuccess: (job) => {
-      queryClient.invalidateQueries('jobs');
+      queryClient.invalidateQueries(['jobs']);
       onSuccess?.(job);
     },
   });
