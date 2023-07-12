@@ -1,8 +1,11 @@
+import React from 'react';
+
 import { Stack } from '@chakra-ui/react';
 import { useForm } from 'react-hook-form';
 
 import { Button } from '@/components/button';
 import { InputField } from '@/components/form';
+import { useLogin } from '../../api/login';
 
 import { LoginData } from '../../types';
 
@@ -13,11 +16,13 @@ export type LoginFormProps = {
 export const LoginForm = ({
   onSuccess,
 }: LoginFormProps) => {
+  const login = useLogin({ onSuccess });
+
   const { register, handleSubmit, formState } =
     useForm<LoginData>();
 
   const onSubmit = (data: LoginData) => {
-    console.log(data);
+    login.submit(data);
   };
 
   return (
@@ -41,7 +46,13 @@ export const LoginForm = ({
         })}
         error={formState.errors['password']}
       />
-      <Button type="submit">Log in</Button>
+      <Button
+        isLoading={login.isLoading}
+        isDisabled={login.isLoading}
+        type="submit"
+      >
+        Log in
+      </Button>
     </Stack>
   );
 };
