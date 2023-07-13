@@ -4,3 +4,5 @@ export * from './components/protected';
 
 // types:
 export * from './types';
+
+export * from './api/logout';
