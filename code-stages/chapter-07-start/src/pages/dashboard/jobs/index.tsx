@@ -1,13 +1,12 @@
 import { PlusSquareIcon } from '@chakra-ui/icons';
 import { Heading, HStack } from '@chakra-ui/react';
-import { ReactElement } from 'react';
+import React, { ReactElement } from 'react';
 
 import { Link } from '@/components/link';
 import { Seo } from '@/components/seo';
 import { JobsList, useJobs } from '@/features/jobs';
 import { DashboardLayout } from '@/layouts/dashboard-layout';
-import { useUser } from '@/testing/test-data';
-
+import { useUser } from '@/features/auth';
 const DashboardJobsPage = () => {
   const user = useUser();
 

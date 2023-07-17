@@ -9,10 +9,9 @@ import React, { ReactNode } from 'react';
 
 import { Button } from '@/components/button';
 import { Link } from '@/components/link';
-import { useUser } from '@/testing/test-data';
 
 import { useRouter } from 'next/router';
-import { useLogout } from '@/features/auth';
+import { useLogout, useUser } from '@/features/auth';
 
 type DashboardLayoutProps = {
   children: ReactNode;

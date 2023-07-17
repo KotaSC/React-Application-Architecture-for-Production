@@ -6,3 +6,4 @@ export * from './components/protected';
 export * from './types';
 
 export * from './api/logout';
+export * from './api/get-auth-user';
